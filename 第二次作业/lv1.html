@@ -7,49 +7,69 @@
     <title>Document</title>
 </head>
 <style>
-    .box{
+    @media only screen and (max-width: 784px){
+        .dd{
+            order:-1;
+        }
+        .aa{
+            order:2;
+        }
+        .bb{
+            order:3;
+        }
+        .cc{
+            order:4;
+        }
+        body
+        .box{
+            display: flex;
+            margin: auto;
+            align-items:flex-start;
+        }
+    }
+
+      .box{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         margin: auto;
         align-items: center;
-    }
-    .aa{
+      }
+      .aa{
         order: initial;
         padding: 20px;
-    }
-    .a{
+     }
+     .a{
         width: 150px;
         height: 120px;
         border: 1px solid red;
-    }
-    .b{
+     }
+     .b{
         width: 150px;
         height: 100px;
         border: 1px solid red;
-    }
-    .bb{
+     }
+     .bb{
         order: initial;
         padding: 20px;
-    }
-    .cc{
-        padding: 20px;
-        order: initial;
-    }
-    .c{
+     }
+     .cc{
+         padding: 20px;
+     }
+     .c{
         width: 150px;
         height: 40px;
         border: 1px solid red;
-    }
-    .dd{
+     }
+     .dd{
         padding: 20px;
-        order: 1;
-    }
-    .d{
+     }
+     .d{
         width: 150px;
         height: 200px;
         border:1px solid blue;
-    }
+     }
+
 
 </style>
 <body>
