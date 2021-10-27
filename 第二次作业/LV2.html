@@ -7,18 +7,81 @@
     <title>Document</title>
 </head>
 <style>
+    .a{
+        width: 300px;
+        height: 450px;
+        padding: 20px;
+        border:1px solid black;
+    }
+    .b{
+        float: left;
+        position: relative;
+        left: 400px;
+        top: -493px;
+        width: 300px;
+        height: 450px;
+        padding: 20px;
+        border:1px solid black;
+    }
     .aa{
         width: 300px;
         height: 450px;
+        transition-duration: 500ms;
         background-color: gray;
-        transition-duration: 1s;
-        transition-timing-function: ease-in;
-        transform: translate(y 20);
+        z-index: 2;
+    }
+    .aa:hover{
+        transition-timing-function: ease-in-out;
+        transform: translatey(-100px);
+    }
+    .button1{
+        position: relative;
+        float: left;
+        left: 45px;
+        top:300px;
+        border: none;
+        z-index: 5;
+        width: 200px;
+        height: 100px;
+    }
+    .button1:hover{
+        color:aqua ;
+        background-color: cadetblue;
+    }
+    .c{
+        float: left;
+        position: relative;
+        left: 460px;
+        top: -493px;
+        width: 300px;
+        height: 450px;
+        padding: 20px;
+        border:1px solid black;
     }
 </style>
 <body>
-    <div class="a">
-        <div class="aa"></div>
+    <div class="box">
+        <div class="a">
+            <div class="aa">
+                <button class="button1">read more</button>
+            </div>
+        </div>
+        <div class="b">
+             <div class="aa">
+                <button class="button1">read more</button>
+             </div>
+        </div>
+        <div class="c">
+            <div class="aa">
+               <button class="button1">read more</button>
+            </div>
+       </div>
+    </div>
+
+
+
+
+    
     </div>
 </body>
 </html>
