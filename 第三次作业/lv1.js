@@ -12,7 +12,7 @@ function copy(woqu){
   return obj2;
 }
 
-//以下定义一个新函数
+// 以下定义一个新函数
 function azhe(name1){
   let obj = {};
   for(let i in name1){
