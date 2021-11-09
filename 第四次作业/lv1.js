@@ -26,4 +26,6 @@ function fafactorial1(n){
         }
     }
 }
-console.log(fafactorial1(3))
+console.log(fafactorial1(5))
+
+/*test,我看一下我的git删除后重新装了还能不能用 */
