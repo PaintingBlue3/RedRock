@@ -13,7 +13,8 @@ const person = {
   const{age}=person;
   const{address:{city}}=person;
   const{address:{area}}=person;
-  const{title:[title1,titleA]}=person;  
+  // const{title:[title1,titleA]}=person;  
+  const { title: [title1, {title: title2 }, title3 = 'god'] } = person;
 /* 不是很清楚这个{year:2021, title:'GoodStudent'}怎么再解构了，
 就把括号里当成一个整体再取的，不知道是不是这个意思*/
 
@@ -23,5 +24,5 @@ const person = {
   console.log(city) // ChongQing
   console.log(area) // NanShan
   console.log(title1) // student
-  console.log(titleA.title)// GoodStudent
- // console.log(title3) // God  /*god在哪里，要自己加吗（泪）*/
+  console.log(title2)// GoodStudent
+  console.log(title3) // God

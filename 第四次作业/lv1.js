@@ -11,21 +11,22 @@ console.log(fafactorial(5));
 
 
 /*------这是递归--------*/
-function fafactorial1(n){
-    let result = 1;
+// function factorial1 (n){
+//     return n === 1 || n === 0 ? 1 : n*factorial1(n-1);
+// }
+
+
+function factorial1(n){
     while(1)
     {
-        if(n==1)
+        if( n === 1 || n === 0 )
         {
-            return result;
+            return n;
         }
         else
         {
-            result *= n;
-            n--;
+            return n * factorial1(n - 1);
         }
     }
 }
-console.log(fafactorial1(5))
-
-/*test,我看一下我的git删除后重新装了还能不能用 */
+console.log(factorial1(6));
