@@ -30,10 +30,14 @@
 
     <button id="button" onclick="handleClick()">background-color</button>
     <script>
-         let spans = document.querySelectorAll('span')
+         const spans = document.querySelectorAll('span')
          function handleClick() {
                 for(i=0;i<=10;i++){
-                    if(spans[i].style.backgroundColor == 'black'){
+                    
+                    if(spans[i].style.backgroundColor == 'black')
+                    
+                    // if(window.getComputedStyle(spans[i]).getPropertyValue('background-color') == 'rgb(0, 0, 0)')
+                    {
                         spans[i].style.backgroundColor = 'white'; 
                     }
                     else{

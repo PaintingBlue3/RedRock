@@ -8,9 +8,16 @@
     <title>lv2</title>
 </head>
 
+<style>
+    .a{
+        display: flex;
+        justify-content: center;
+    }
+</style>
+
 <body>
 
-    <div align="center">
+    <div class="a">
         <b>请选择您的爱好</b>
         <br />
     </div>
@@ -30,17 +37,17 @@
 <script>
     let input = document.querySelectorAll('input')
     function fullChoose(){
-        for(i=0;i<=4;i++){
+        for(i=0;i<=input.length;i++){
             input[i].checked = true;
         }
     }
     function fullUnchoose(){
-        for(i=0;i<=4;i++){
+        for(i=0;i<=input.length;i++){
             input[i].checked = false;
         }
     }
     function antiChoose(){
-        for(i=0;i<=4;i++){
+        for(i=0;i<=input.length;i++){
             if(input[i].checked == true){
                 input[i].checked = false;
             }
