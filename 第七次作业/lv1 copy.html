@@ -12,23 +12,18 @@
   <input type="submit">
 </form>
 
-<script>
-  message.onsubmit = async (e) => {
-    e.preventDefault();
-
-    let response = await fetch('/homework/fufubot_test/', {
-      method: 'POST',
-      headers:{
-        'Content-Type':'multipart/form-data'
-      },
-      body: new FormData(message)
-    });
-
-    let result = await response.json();
+<script type="module">
+  let message ='??';
+  let response = await fetch('/homework/fufubot_test/', {
+    method: 'POST',
+    headers:{
+     'Content-Type':'multipart/form-data'
+    },
+    body: new FormData(message)
+   });
 
     // alert(result.message);
     /*没学会对不起。。*/
-  };
 </script>
 </body>
 </html>
