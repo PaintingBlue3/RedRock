@@ -5,30 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="lv1.css">
 </head>
 <body>
-  <form id="message">
-  <input type="text" name="name" >
-  <input type="submit">
-</form>
-
-<script>
-  message.onsubmit = async (e) => {
-    e.preventDefault();
-
-    let response = await fetch('/homework/fufubot_test/', {
-      method: 'POST',
-      headers:{
-        'Content-Type':'multipart/form-data'
-      },
-      body: new FormData(message)
-    });
-
-    let result = await response.json();
-
-    // alert(result.message);
-    /*没学会对不起。。*/
-  };
-</script>
+  <input type="text" class="input">
+  <button class="button"> send </button>
 </body>
+<script type="module">
+  const button = document.querySelector("button");
+  const input = document.quertSelector("input");
+
+  button.addEventListener("click",send);
+
+  async function send(){
+    const formData = new FormData();
+    formData.append("message",input.value);//修改formData为input内的内容
+
+    console.log(formData);
+
+
+
+  }
+</script>
 </html>

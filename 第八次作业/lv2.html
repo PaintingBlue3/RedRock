@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    //我不太清楚es6是啥方法捏，总之我第一个想到的实现方法是这样的
+    let arr = [1,1,2,2,3,3,5,4,5,4];
+    let arr1 = [];
+    for(i=1;i<arr.length;i++)
+    {
+        let flag=0;
+        for(k=1;k<=arr.length;k++)
+        {
+            if(arr[i]==arr1[k])
+            flag=1;
+        }
+        if(flag == 0)
+        {
+            arr1.push(arr[i]);
+        }
+    }
+    console.log(arr1);
+    //只写了一个，我很抱歉，但我要去为考核复习了，，，，
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
