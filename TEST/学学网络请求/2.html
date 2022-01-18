@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a id="but">鼠标经过按钮</a>
+    <button id='login-btn'></button>
+<div id="box">需要显示/隐藏的标签</div>
+<script>
+(function(){
+	var btn = document.getElementById('login-btn');
+	var box = document.getElementById('login-box');
+	var timer = null;
+	box.onmouseover = btn.onmouseover = function(){
+		if(timer) clearTimeout(timer)
+		box.style.display = 'block';
+	}
+	box.onmouseout = btn.onmouseout = function(){
+		timer = setTimeout(function(){
+			box.style.display = 'none';
+		},400);
+	}
+})();
+</script>
+
+</body>
+</html>

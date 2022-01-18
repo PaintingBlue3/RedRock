@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script type="module">
+    //前提1：async 返回一个promise
+    //2：promise有两个选项，resolve与reject，若resolve便会执行resolve()这个函数，reject同理
+    // const sleep = time => new Promise(resovled => setTimeout(resovled, time))
+    const sleep = time => new Promise(resolved => setTimeout(resolved, time));
+
+    await sleep(1000);
+    console.log('嘿嘿')
+</script>
+
+</html>
