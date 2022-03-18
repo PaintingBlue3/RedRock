@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn">submit</button>
+</body>
+<script>
+    const btn = document.querySelector('#btn');
+    btn.addEventListener('click', debonce(submit, 500));
+    function submit() {
+        console.log('submit');
+    }
+
+    function debonce(fn, delay) {
+        let t = null;//为啥t在这里逻辑也没问题？
+        return () => {
+            if (t) {
+                clearTimeout(t);
+            }
+            t = setTimeout(() => fn(), delay)
+            //若下一次点击在上一次的多少毫秒内就算作一次，每按一次重新开始计时
+        }
+    }
+</script>
+
+</html>
