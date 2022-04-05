@@ -1,0 +1,11 @@
+{
+    "name": "bluebag",
+    "version": "1.0.0",
+    "main": "index.js",
+    "description": "作业",
+    "keywords": [
+        "GET",
+        "POST"
+    ],
+    "license":"ISC"
+}
